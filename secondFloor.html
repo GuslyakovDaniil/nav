@@ -18,24 +18,39 @@
 </a>
 
 <!-- Поиск -->
-<div class="search-bar" id="searchBar">
-    <input type="text" placeholder="Search...">
-    <button id="menuButton">Menu</button>
-    <div class="filter-menu" id="filterMenu">
-        <button id="ageButton">Возраст</button>
-        <button id="seasonButton">Сезон</button>
-        <!-- Добавьте другие кнопки фильтра, если необходимо -->
+<div class="container">
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button id="filterBtn">Filters</button>
+        <div class="popup" id="filterPopup">
+            <div class="dropdown" id="seasonDropdown">
+                <button class="filter-option" id="seasonBtn">Season</button>
+                <div class="dropdown-content" id="seasonOptions">
+                    <label data-value="spring"> Spring</label>
+                    <label data-value="summer"> Summer</label>
+                    <label data-value="autumn"> Autumn</label>
+                    <label data-value="winter"> Winter</label>
+                </div>
+            </div>
+            <div class="dropdown" id="genderDropdown">
+                <button class="filter-option" id="genderBtn">Gender</button>
+                <div class="dropdown-content" id="genderOptions">
+                    <label data-value="male"> Male</label>
+                    <label data-value="female"> Female</label>
+                </div>
+            </div>
+            <div class="dropdown" id="ratingDropdown">
+                <button class="filter-option" id="ratingBtn">Rating</button>
+                <div class="dropdown-content" id="ratingOptions">
+                    <label data-value="1"> 1 star</label>
+                    <label data-value="2"> 2 stars</label>
+                    <label data-value="3"> 3 stars</label>
+                    <label data-value="4"> 4 stars</label>
+                    <label data-value="5"> 5 stars</label>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- Второе меню для выбора сезона -->
-    <div class="season-menu" id="seasonMenu">
-        <button>Лето</button>
-        <button>Осень</button>
-        <button>Зима</button>
-        <button>Весна</button>
-        <!-- Добавьте другие варианты сезона, если необходимо -->
-    </div>
-</div>
 
 <!-- Кнопка-изображение -->
 <a href="nav.html" class="image-button">

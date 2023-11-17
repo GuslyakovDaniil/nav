@@ -370,12 +370,6 @@ function showRoomInfo(roomNumber, popup, roomTexts) {
     // Показываем всплывающее окно
     popup.style.display = 'block';
 }
-
-
-
-
-
-
 // Добавляем обработчики события click для каждой комнаты
 addRoomClickHandler(room1, 1, popupRoom1, roomTexts);
 addRoomClickHandler(room21, '2.1', popupRoom2_1, roomTexts);
@@ -437,8 +431,6 @@ function showRoomCoordinates(roomNumber, popup, roomTexts) {
     // Показываем всплывающее окно
     popup.style.display = 'block';
 }
-
-
 //Фильтр/поиск=================================================================================================================
     function toggleMenu(menuId) {
         var menu = document.getElementById(menuId);
