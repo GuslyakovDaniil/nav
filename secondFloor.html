@@ -1,49 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>2 Этаж</title>
-
-  <link rel="stylesheet" href="css\Floor.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 Этаж</title>
+    <link rel="stylesheet" href="css/Floor.css">
 </head>
+<body>
+
 <div class="floor-buttons">
     <button id="floorButton1" onclick="goToFloor(1)">Этаж 1</button>
     <button id="floorButton2" onclick="goToFloor(2)">Этаж 2</button>
 </div>
+
 <a href="nav.html" class="image-button">
-    <img src="img\nav.png" alt="Кнопка-изображение">
+    <img src="img/nav.png" alt="Кнопка-изображение">
 </a>
-<body>
-    <!-- Поиск -->
-    <div class="search-bar" id="searchBar">
-        <input type="text" placeholder="Search...">
-        <button id="menuButton">Menu</button>
-        <div class="filter-menu" id="filterMenu">
-            <button id="ageButton">Возраст</button>
-            <button id="seasonButton">Сезон</button>
-            <!-- Добавьте другие кнопки фильтра, если необходимо -->
-        </div>
-    
-        <!-- Второе меню для выбора сезона -->
-        <div class="season-menu" id="seasonMenu">
-            <button>Лето</button>
-            <button>Осень</button>
-            <button>Зима</button>
-            <button>Весна</button>
-            <!-- Добавьте другие варианты сезона, если необходимо -->
-        </div>
-    
-         <!-- Кнопка-изображение -->
-    <a href="nav.html" class="image-button">
-        <img src="img\nav.png" alt="Кнопка-изображение">
-    </a>
+
+<!-- Поиск -->
+<div class="search-bar" id="searchBar">
+    <input type="text" placeholder="Search...">
+    <button id="menuButton">Menu</button>
+    <div class="filter-menu" id="filterMenu">
+        <button id="ageButton">Возраст</button>
+        <button id="seasonButton">Сезон</button>
+        <!-- Добавьте другие кнопки фильтра, если необходимо -->
     </div>
-    <script>
-        // JavaScript код для переключения этажей
-        document.getElementById('floorButton1').addEventListener('click', function() {
-            // Переход на первый этаж
-            window.location.href = 'firstFloor.html';
-        });
-    </script>
+
+    <!-- Второе меню для выбора сезона -->
+    <div class="season-menu" id="seasonMenu">
+        <button>Лето</button>
+        <button>Осень</button>
+        <button>Зима</button>
+        <button>Весна</button>
+        <!-- Добавьте другие варианты сезона, если необходимо -->
+    </div>
+</div>
+
+<!-- Кнопка-изображение -->
+<a href="nav.html" class="image-button">
+    <img src="img/nav.png" alt="Кнопка-изображение">
+</a>
+
+<script>
+    // JavaScript код для переключения этажей
+    document.getElementById('floorButton1').addEventListener('click', function () {
+        // Переход на первый этаж
+        window.location.href = 'firstFloor.html';
+    });
+</script>
+
     <svg id="my-svg" xmlns="http://www.w3.org/2000/svg">
         <!-- Прямоугольный треугольник в качестве заднего фона -->
         <polygon id="background-polygon" fill="lightgray"/>
@@ -53,7 +59,6 @@
         <rect id="background-rect-2" fill="lightgray" />
 
         <!-- Комната 1 -->
-
         <rect id="room-1" fill="rgb(220,242,115)" stroke="black" stroke-width="1.3"/>
 
         <rect id="room-2" fill="rgb(220,242,115)" stroke="black" stroke-width="1.3"/>

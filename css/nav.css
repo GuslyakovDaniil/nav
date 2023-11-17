@@ -43,8 +43,8 @@ body {
 /* Стили для вашей кнопки-изображения */
 .image-button {
     position: absolute;
-    top: 180%;
-    left: 440.5%;
+    top: 14%; /* Процентный отступ сверху (выберите подходящее значение) */
+    right: 2%;
 }
 
 .image-button img {
@@ -52,6 +52,7 @@ body {
     width: 55px;
     height: 55px;
 }
+
 .search-bar {
     width: 20%;
     padding: 10px;
