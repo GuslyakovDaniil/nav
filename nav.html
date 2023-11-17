@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>1 Этаж</title>
+  <link rel="stylesheet" href="css\nav.css">
+</head>
+<body>
+<!-- Поиск -->
+<!-- Поиск -->
+<div class="search-bar" id="searchBar">
+    <!-- Удалите строку поиска -->
+    
+    <!-- Добавьте два поля для ввода -->
+    <input type="text" id="pointA" placeholder="Пункт А">
+    <input type="text" id="pointB" placeholder="Пункт Б">
+
+    <button id="menuButton">Menu</button>
+    <div class="filter-menu" id="filterMenu">
+        <button id="ageButton">Возраст</button>
+        <button id="seasonButton">Сезон</button>
+        <!-- Добавьте другие кнопки фильтра, если необходимо -->
+    </div>
+
+    <!-- Второе меню для выбора сезона -->
+    <div class="season-menu" id="seasonMenu">
+        <button>Лето</button>
+        <button>Осень</button>
+        <button>Зима</button>
+        <button>Весна</button>
+        <!-- Добавьте другие варианты сезона, если необходимо -->
+    </div>
+
+    <!-- Кнопка-изображение -->
+    <a href="firstFloor.html" class="image-button">
+        <img src="img\krestik.png" alt="Кнопка-изображение">
+    </a>
+</div>
+<div id="floatingButtonContainer1">
+    <button id="floorButton1" onclick="goToFloor(1)">1</button>
+</div>
+<div id="floatingButtonContainer2">
+    <button id="floorButton2" onclick="goToFloor(2)">2</button>
+</div>
+    <svg id="my-svg" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Прямоугольный треугольник в качестве заднего фона -->
+        <polygon id="background-polygon" fill="lightgray"/>
+
+        <!-- Фон -->
+        <rect id="background-rect-1" fill="lightgray" rx="20" ry="20"/>
+        <rect id="background-rect-2" fill="lightgray" />
+
+        <!-- Вход -->
+        <rect id="enter" fill="rgb(101,166,222)" stroke="black" stroke-width="1.3"/>
+        <text id="text-enter" font-family="Arial" font-size="25" fill="black"></text>
+      
+        <!-- Комната 1 -->
+        <rect id="room-1" fill="rgb(220,242,115)" stroke="black" stroke-width="1.3"/>
+        <text id="text-1" font-family="Arial" font-size="25" fill="black"></text>
+      
+        <!-- Комната 2.1 -->
+        <rect id="room-2.1" fill="rgb(250,248,113)" stroke="black" stroke-width="1.3"/>
+        <text id="text-2" font-family="Arial" font-size="20" fill="black"></text>
+
+        <!-- Комната 2.2 -->
+        <rect id="room-2.2" fill="rgb(250,248,113)" stroke="black" stroke-width="1.3"/>
+            
+        <!-- Комната 2.3 -->
+        <rect id="room-2.3" fill="rgb(250,248,113)"/>
+
+        <!-- Комната 3 -->
+        <rect id="room-3" fill="rgb(190,236,114)" stroke="black" stroke-width="1.3"/>
+        <text id="text-3" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- Комната 4-->
+         <rect id="room-4" fill="rgb(160,228,115)" stroke="black" stroke-width="1.3"/>
+         <text id="text-4" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- Комната 5-->
+         <rect id="room-5" fill="rgb(134,226,115)" stroke="black" stroke-width="1.3"/>
+         <text id="text-5" font-family="Arial" font-size="20" fill="black"></text>
+   
+         <!-- Комната 6-->
+         <rect id="room-6" fill="rgb(112,237,29)" stroke="black" stroke-width="1.3"/>
+         <text id="text-6" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- 2 слой-->
+         <!-- Комната 7 -->
+        <rect id="room-7" fill="rgb(251,219,116)" stroke="black" stroke-width="1.3"/>
+        <text id="text-7" font-family="Arial" font-size="25" fill="black"></text>
+
+        <!-- Комната 8 -->
+        <rect id="room-8" fill="rgb(253,189,118)" stroke="black" stroke-width="1.3"/>
+        <text id="text-8" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- Комната 9-->
+         <rect id="room-9" fill="rgb(255,160,122)" stroke="black" stroke-width="1.3"/>
+         <text id="text-9" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- Комната 10-->
+         <rect id="room-10" fill="rgb(248,145,148)" stroke="black" stroke-width="1.3"/>
+         <text id="text-10" font-family="Arial" font-size="20" fill="black"></text>
+   
+         <!-- Комната 11-->
+         <rect id="room-11" fill="rgb(242,129,172)" stroke="black" stroke-width="1.3"/>
+         <text id="text-11" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- Комната 12-->
+         <rect id="room-12" fill="rgb(236,114,197)" stroke="black" stroke-width="1.3"/>
+         <text id="text-12" font-family="Arial" font-size="20" fill="black"></text>
+
+          <!-- 3 слой-->
+          <!-- Много элементов - НАЧАЛО===============================================-->
+          <!-- Комната 13-->
+         <rect id="room-13.1" fill="rgb(160,228,115)" stroke="black" stroke-width="1.3"/>
+         <text id="text-13" font-family="Arial" font-size="20" fill="black"></text>
+
+        <!-- Треугольник-->
+        <polygon id="background-polygon1" fill="rgb(160,228,115)" stroke="black" stroke-width="1.3"/>
+
+         <!-- Комната 13.2-->
+         <rect id="room-13.2" fill="rgb(160,228,115)"/>
+
+         <!-- Комната 13.3-->
+         <rect id="room-13.3" fill="rgb(160,228,115)" stroke="black" stroke-width="1.3"/>
+
+         <!-- Комната 13.4-->
+         <rect id="room-13.4" fill="rgb(160,228,115)"/>
+         <!-- Много элементов - КОНЕЦ=================================================-->
+        
+         <!-- Комната 14-->
+         <rect id="room-14" fill="rgb(190,236,114)" stroke="black" stroke-width="1.3"/>
+         <text id="text-14" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- Комната 15-->
+         <rect id="room-15" fill="rgb(220,242,115)" stroke="black" stroke-width="1.3"/>
+         <text id="text-15" font-family="Arial" font-size="20" fill="black"></text>
+  
+         <!-- Комната 16-->
+         <rect id="room-16" fill="rgb(250,248,113)" stroke="black" stroke-width="1.3"/>
+         <text id="text-16" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- Комната 17-->
+         <rect id="room-17" fill="rgb(242,129,172)" stroke="black" stroke-width="1.3"/>
+         <text id="text-17" font-family="Arial" font-size="20" fill="black"></text>
+
+         <!-- Комната 18-->
+         <rect id="room-18" fill="rgb(242,129,172)" stroke="black" stroke-width="1.3"/>
+         <text id="text-18" font-family="Arial" font-size="20" fill="black"></text>
+        </svg>
+    <script src="/scripts/1atscr.js"></script>
+
+    <script>
+        window.onload = function() {
+            updateSVG(); // Вызываем функцию updateSVG из отдельного файла
+        };
+        window.onresize = function() {
+            updateSVG(); // Вызываем функцию updateSVG при изменении размера окна
+        };
+    </script>
+
+    
+</body>
+</html>
