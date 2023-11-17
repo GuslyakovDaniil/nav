@@ -43,14 +43,14 @@ body {
 /* Стили для вашей кнопки-изображения */
 .image-button {
     position: absolute;
-    top: 90px;
-    left: 1420px;
+    top: 180%;
+    left: 440.5%;
 }
 
 .image-button img {
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
 }
 .search-bar {
     width: 20%;

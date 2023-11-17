@@ -5,7 +5,6 @@
 
   <link rel="stylesheet" href="css\Floor.css">
 </head>
-
 <div class="floor-buttons">
     <button id="floorButton1" onclick="goToFloor(1)">Этаж 1</button>
     <button id="floorButton2" onclick="goToFloor(2)">Этаж 2</button>
@@ -33,7 +32,10 @@
             <!-- Добавьте другие варианты сезона, если необходимо -->
         </div>
     
-        <!-- Кнопки для перехода между этажами -->
+         <!-- Кнопка-изображение -->
+    <a href="nav.html" class="image-button">
+        <img src="img\nav.png" alt="Кнопка-изображение">
+    </a>
     </div>
     <script>
         // JavaScript код для переключения этажей
@@ -42,10 +44,7 @@
             window.location.href = 'firstFloor.html';
         });
     </script>
-    
     <svg id="my-svg" xmlns="http://www.w3.org/2000/svg">
-
-
         <!-- Прямоугольный треугольник в качестве заднего фона -->
         <polygon id="background-polygon" fill="lightgray"/>
 
