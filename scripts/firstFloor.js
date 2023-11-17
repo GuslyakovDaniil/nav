@@ -1,17 +1,24 @@
 function updateSVG() {
     const screenWidth = window.innerWidth;
     const screenHeight = window.innerHeight;
-
-    const centerX = screenWidth / 2;
-    const centerY = screenHeight / 2;
-
-    const viewBoxWidth = screenWidth;
-    const viewBoxHeight = screenHeight;
-
+    
     const svg = document.getElementById('my-svg');
+
+    // Center the SVG within the viewport
+    const xOffset = -screenWidth / 4.5; // Adjust as needed
+    const yOffset = -screenHeight / 50; // Adjust as needed
+
+    // Set viewBox with the offset values
+    svg.setAttribute('viewBox', `${xOffset} ${yOffset} ${screenWidth} ${screenHeight}`);
+
+    // Set SVG width and height
     svg.setAttribute('width', screenWidth);
     svg.setAttribute('height', screenHeight);
-    svg.setAttribute('viewBox', `${centerX - viewBoxWidth / 1.4} ${centerY - viewBoxHeight / 1.7} ${viewBoxWidth} ${viewBoxHeight}`);
+
+
+// Вызываем функцию при загрузке страницы и изменении размера окна
+window.addEventListener('load', updateSVG);
+window.addEventListener('resize', updateSVG);
 
     function createPopup() {
         const popup = document.createElement('div');
@@ -48,7 +55,7 @@ function updateSVG() {
     const roomTexts = {
         1: {
             text: '«5 КармаNов» — это сеть розничных мультибрендовых магазинов джинсовой одежды на каждый день оригинального дизайна и высокого качества.',
-            image: 'img/Karmanobv.jpg', // Замените на путь к вашему изображению
+            image: '/img/Karmanobv.jpg', // Замените на путь к вашему изображению
         },
         '2.1': {
             text: 'Text for Room 2.1',
@@ -151,7 +158,7 @@ function updateSVG() {
     image.setAttribute('y', 0.74 * screenHeight);
     image.setAttribute('width', 0.05 * screenWidth);
     image.setAttribute('height', 0.05 * screenHeight);
-    image.setAttribute('href', 'img/lest.PNG');
+    image.setAttribute('href', '/img/lest.PNG');
 
     svg.appendChild(image);
     
@@ -431,80 +438,45 @@ function showRoomCoordinates(roomNumber, popup, roomTexts) {
     // Показываем всплывающее окно
     popup.style.display = 'block';
 }
-//Фильтр/поиск=================================================================================================================
-    function toggleMenu(menuId) {
-        var menu = document.getElementById(menuId);
-    
-        // Скрываем все меню, кроме того, которое должно отобразиться
-        var allMenus = document.querySelectorAll(".filter-menu, .season-menu");
-        allMenus.forEach(function (item) {
-            if (item.id !== menuId) {
-                item.style.display = "none";
-            }
-        });
-    
-        if (window.getComputedStyle(menu).display === "block") {
-            menu.style.display = "none";
-        } else {
-            menu.style.display = "block";
-        }
+document.getElementById('filterBtn').addEventListener('click', function () {
+    var popup = document.getElementById('filterPopup');
+    if (popup.style.display === 'block') {
+        popup.style.display = 'none';
+    } else {
+        popup.style.display = 'block';
     }
-    
-    document.getElementById("menuButton").addEventListener("click", function (e) {
-        e.stopPropagation();
-        toggleMenu("filterMenu");
-    });
-    
-    document.getElementById("ageButton").addEventListener("click", function (e) {
-        e.stopPropagation();
-        toggleMenu("filterMenu");
-    });
-    
-    document.getElementById("seasonButton").addEventListener("click", function (e) {
-        e.stopPropagation();
-        toggleMenu("seasonMenu");
-    });
+});
 
-    document.getElementById("genderButton").addEventListener("click", function (e) {
-        e.stopPropagation();
-        toggleMenu("genderButton");
-    });
-    
-    document.addEventListener("mouseup", function (e) {
-        var filterMenu = document.getElementById("filterMenu");
-        var seasonMenu = document.getElementById("seasonMenu");
-        var genderButton = document.getElementById("genderButton");
-    
-        if (!filterMenu.contains(e.target)) {
-            filterMenu.style.display = "none";
-        }
-    
-        if (!seasonMenu.contains(e.target)) {
-            seasonMenu.style.display = "none";
-        }
-    });
-    function updateSearchBarSize() {
-        const searchBar = document.getElementById('searchBar');
-        const screenWidth = window.innerWidth;
-    
-        // Пример: изменение ширины на 80% для маленьких экранов
-        if (screenWidth <= 600) {
-            searchBar.style.width = '80%';
-        } else {
-            searchBar.style.width = '20%';
-        }
+function toggleDropdown(dropdownId) {
+    var dropdown = document.getElementById(dropdownId);
+    if (dropdown.style.display === 'block') {
+        dropdown.style.display = 'none';
+    } else {
+        dropdown.style.display = 'block';
     }
-    
-    // Обработчики событий для кнопок перехода между этажами
-    document.getElementById('floorButton1').addEventListener('click', function () {
-        window.location.href = 'file:///E:/Programs/VSCode/projects/mallMate1/pervat.html'; // Переадресация на pervat.html
+}
+
+function selectCategory(labelElement) {
+    labelElement.classList.toggle('selected');
+}
+
+document.getElementById('seasonBtn').addEventListener('click', function () {
+    toggleDropdown('seasonOptions');
+});
+
+document.getElementById('genderBtn').addEventListener('click', function () {
+    toggleDropdown('genderOptions');
+});
+
+document.getElementById('ratingBtn').addEventListener('click', function () {
+    toggleDropdown('ratingOptions');
+});
+
+// Add event listeners for label clicks in each category
+document.querySelectorAll('.dropdown-content label').forEach(function (label) {
+    label.addEventListener('click', function () {
+        selectCategory(label);
     });
-    
-    document.getElementById('floorButton2').addEventListener('click', function () {
-        window.location.href = 'file:///E:/Programs/VSCode/projects/mallMate1/vtorat.html'; // Переадресация на vtorat.html
-    });
-    
-    // Вызываем функцию при загрузке страницы и изменении размера окна
-    window.addEventListener('load', updateSearchBarSize);
-    window.addEventListener('resize', updateSearchBarSize);
+});
+
 }
