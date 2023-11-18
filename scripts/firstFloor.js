@@ -31,6 +31,7 @@ window.addEventListener('resize', updateSVG);
         document.body.appendChild(popup);
         return popup;
     }
+
     
     // Создаем всплывающие окна для каждой комнаты
     const popupRoom1 = createPopup();
@@ -126,7 +127,6 @@ window.addEventListener('resize', updateSVG);
             image: 'img/Karmanobv.jpg', // Замените на путь к вашему изображению
         },
     };
-    // Добавьте класс "room-text" к каждому текстовому элементу
 
     //Треугольник
     const backgroundPolygon = document.getElementById('background-polygon');
