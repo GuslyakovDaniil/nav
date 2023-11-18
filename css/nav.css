@@ -1,6 +1,7 @@
 body {
     background-color: #8b8686;
     margin: 0;
+    overflow: hidden;
 }
 
 .search-bar {

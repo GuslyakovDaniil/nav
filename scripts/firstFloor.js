@@ -318,7 +318,6 @@ window.addEventListener('resize', updateSVG);
     room18.setAttribute('y', 0.7 * screenHeight);
     room18.setAttribute('width', 0.025 * screenWidth);
     room18.setAttribute('height', 0.15 * screenHeight);
-
 //======================================================================================
 // Добавляем обработчики события click для каждой комнаты
 function addRoomClickHandler(roomElement, roomNumber, popup, roomTexts) {
