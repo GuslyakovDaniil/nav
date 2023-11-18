@@ -9,7 +9,7 @@ body {
 .image-button {
     position: absolute;
     top: 1.4%; /* Процентный отступ сверху (выберите подходящее значение) */
-    right: 22%;
+    right: 21%;
     box-shadow: 0 0 15px #BAFF39;
     background-color: #f0f0f089;
     border-radius: 5px;
@@ -177,6 +177,7 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
+    color: white;
     background-color: rgb(110, 110, 110);
     border-radius: 5px;
     padding: 10px;
@@ -196,7 +197,7 @@ body {
     margin-right: 5px;
 }
 .selected {
-    background-color: #ddd; /* Adjust the background color as needed */
     border-radius: 8px; 
+    box-shadow: 0 0 10px #BAFF39;
 }
 
