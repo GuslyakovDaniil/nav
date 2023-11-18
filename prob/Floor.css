@@ -1,23 +1,19 @@
 body {
-    background-image: url('/img/fon/fon1.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #8b8686;
     margin: 0;
     overflow: hidden;
 }
 /* Стили для вашей кнопки-изображения */
 .image-button {
     position: absolute;
-    top: 1.4%; /* Процентный отступ сверху (выберите подходящее значение) */
-    right: 22%;
-    box-shadow: 0 0 15px #BAFF39;
-    background-color: #f0f0f089;
-    border-radius: 5px;
+    top: 8%; /* Процентный отступ сверху (выберите подходящее значение) */
+    right: 5%;
 }
 
 .image-button img {
     display: block;
-    width: 48px;
+    width: 55px;
+    height: 55px;
 }
 .filter-menu,
 .season-menu {
@@ -89,8 +85,8 @@ body {
 
 /* Стили для 2 этажа */
 #floorButton2 {
-    background-color: #BAFF39;
-    color: #000000;
+    background-color: #555;
+    color: white;
     border: none;
     border-radius: 50px; /* Горизонтальный овал */
     padding: 10px 20px; /* Поправки в отступы */
@@ -114,57 +110,54 @@ body {
 
 /* ===================================== */
 .container {
-    max-width: 100%;
+    max-width: 500px;
+    
 }
 
 .search-bar {
     position: relative;
-    background-color: rgb(110, 110, 110);
-    padding: 1%;
-    border-radius: 0px;
-    display: flex;
-    justify-content: center; /* Центрируем содержимое по горизонтали */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #searchInput {
-    width: 50%; /* Измените на необходимую ширину */
-    padding: 0.4%;
+    width: 78%;
+    padding: 8px;
+    margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 #filterBtn {
-    background-color: #BAFF39;
-    color: #000000;
+    background-color: #333;
+    color: #fff;
     padding: 8px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-right: 20%;
-    margin-left: -24%;
 }
 
 .popup {
     display: none;
     position: absolute;
     top: 110%;
-    left: 1.2%;
-    background-color: rgb(110, 110, 110);
-    box-shadow: 0 0 10px rgba(183, 16, 16, 0.1);
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px;
-    
 }
 
 .filter-option {
-    background-color: #555;
-    color: white;
+    background-color: #eee;
+    color: #333;
     border: none;
     padding: 8px;
     margin: 5px;
     border-radius: 4px;
     cursor: pointer;
-    box-shadow: 0 0 10px #BAFF39;
 }
 
 
@@ -177,7 +170,8 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgb(110, 110, 110);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px;
     z-index: 1;
