@@ -11,7 +11,7 @@ function updateSVG() {
 
     // Отрицательные отступы для поднятия и смещения влево SVG
     const xOffset = -halfScreenWidth / 2.332 // Уменьшаем влево
-    const yOffset = -halfScreenHeight / 5.65; // Поднимаем вверх
+    const yOffset = -halfScreenHeight / 30; // Поднимаем вверх
 
     // Центрирование viewBox с отрицательными отступами
     svg.setAttribute('viewBox', `${xOffset} ${yOffset} ${screenWidth} ${screenHeight}`);
