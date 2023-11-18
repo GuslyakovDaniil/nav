@@ -1,4 +1,3 @@
-
 name: Test Build
 
 on:
@@ -12,11 +11,14 @@ jobs:
     steps:
       - name: "Checkout source code"
         uses: actions/checkout@v2
-      - name: "Setup Node.js"
+      - name: "Set up Node.js"
         uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
+
+      - name: "Display push information"
+        run: echo "Push made by ${{ github.actor }}"
 
       - name: "Edit config"
         run: git config --global user.email "g_daniil2014@inbox.ru" && git config --global user.name "GuslyakovDaniil"
@@ -28,11 +30,11 @@ jobs:
       - name: "Npm publish"
         run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      - name: "telegram Notification"
+      - name: "Telegram Notification"
         uses: "appleboy/telegram-action@master"
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: New version publish 
+          args: "New version published by ${{ github.actor }}"
