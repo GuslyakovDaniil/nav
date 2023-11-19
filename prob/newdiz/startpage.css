@@ -6,9 +6,9 @@ body {
     background-image: url('/img/fon/fon1.png');
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0;
+    background-color: rgb(192, 150, 78);
+    height: 100vh;
 }
-
 header {
     background-color: rgb(192,150,78);
     color: #fff;
@@ -25,10 +25,9 @@ header1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85px;
+    height: 60px;
 
 }
-
 .logo img {
     max-width: 100%; /* Размер изображения не превышает ширину контейнера */
     height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
@@ -44,11 +43,9 @@ nav ul {
     display: flex;
     margin-left: 20%;
 }
-
 nav li {
     margin-right: 60px;
 }
-
 nav a {
     text-decoration: none;
     color: #fff;
@@ -56,17 +53,14 @@ nav a {
     font-size: 1.2em;
     transition: color 0.3s;
 }
-
 nav a:hover {
     color: #ffcc00;
 }
-
 /* Поиск */
 /* Добавьте стили для новых элементов */
 .container {
     max-width: 100%;
 }
-
 .search-bar {
     position: relative;
     background-color: rgb(59,59,59);
@@ -75,7 +69,6 @@ nav a:hover {
     display: flex;
     justify-content: center; /* Центрируем содержимое по горизонтали */
 }
-
 #searchInput {
     width: 600px; /* Измените на необходимую ширину */
     padding: 0.4%;
@@ -83,7 +76,6 @@ nav a:hover {
     border-radius: 4px;
     margin-right: 100px;
 }
-
 #filterBtn {
     background-color: rgb(59,59,59);
     color: white;
@@ -94,7 +86,6 @@ nav a:hover {
     margin-right: 20px;
     font-size: 1em;
 }
-
 .popup {
     display: none;
     position: absolute;
@@ -106,7 +97,6 @@ nav a:hover {
     padding: 10px;
     
 }
-
 .filter-option {
     background-color: #555;
     color: white;
@@ -117,14 +107,11 @@ nav a:hover {
     cursor: pointer;
     box-shadow: 0 0 10px rgb(192,150,78);
 }
-
-
 .dropdown {
     position: relative;
     display: inline-block;
     margin-right: 10px;
 }
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -134,7 +121,6 @@ nav a:hover {
     padding: 10px;
     z-index: 1;
 }
-
 .dropdown-content label {
     display: block;
     margin-bottom: 5px;
@@ -142,12 +128,21 @@ nav a:hover {
     overflow: hidden;
     text-overflow: ellipsis; /* Add this line if you want to show an ellipsis (...) for overflowing text */
 }
-
-
 .dropdown-content input {
     margin-right: 5px;
 }
 .selected {
     border-radius: 8px; 
     color: rgb(192,150,78);
+}
+/* Описание */
+.intro-container {
+    padding: 50px;
+    margin-left: 25%;
+    margin-top: -20%;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+}
+.intro h1 {
+    font-size: 2.5em;
 }
