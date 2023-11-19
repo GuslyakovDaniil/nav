@@ -15,6 +15,7 @@
             <ul>
                 <li><a href="#">Навигатор</a></li>
                 <li><a href="#" id="scrollToInteractive">Интерактивная карта</a></li>
+                <button id="scrollToTopBtn">Вверх</button>
             </ul>
         </nav>
         <div class="container">
@@ -61,7 +62,6 @@
         <p>1. Быстрый поиск магазина с фильтрами и интерактивной картой.</p>
         <p>2. Навигация с построением маршрута на карте.</p>
     </div>
-    
     <svg id="my-svg" xmlns="http://www.w3.org/2000/svg">
         <!-- Прямоугольный треугольник в качестве заднего фона -->
         <polygon id="background-polygon" fill="lightgray"/>
@@ -163,6 +163,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+    // Получаем кнопку и добавляем к ней обработчик события
+    var scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    // Показываем кнопку при прокрутке вниз
+    window.addEventListener('scroll', function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTopBtn.style.display = 'block';
+        } else {
+            scrollToTopBtn.style.display = 'none';
+        }
+    });
+
+    // Обработчик события для прокрутки страницы вверх
+    scrollToTopBtn.addEventListener('click', function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    });
+});
+
 // =================================================================================================
         window.onload = function() {
             updateSVG(); // Вызываем функцию updateSVG из отдельного файла

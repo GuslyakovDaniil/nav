@@ -373,10 +373,10 @@ function showRoomInfo(roomNumber, popup, roomTexts) {
     popup.appendChild(textElement);
 
     // Устанавливаем позицию всплывающего окна по центру экрана
-popup.style.position = 'fixed';
-popup.style.left = '15%';
-popup.style.top = '50%';
-popup.style.transform = 'translate(-50%, -50%)'; // Centering trick
+    popup.style.position = 'fixed';
+    popup.style.left = '15%';
+    popup.style.top = '50%';
+    popup.style.transform = 'translate(-50%, -50%)'; // Centering trick
 
 
     // Показываем всплывающее окно

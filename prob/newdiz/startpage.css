@@ -10,6 +10,18 @@ body {
     height: 25vh;
     overflow-x: hidden;
 }
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    background-color: rgb(59,59,59);
+    color: #fff;
+    border: none;
+    border-radius: 50000px;
+    padding: 10px;
+    cursor: pointer;
+}
 header {
     background-color: rgb(192,150,78);
     font-family: ISOCpeur v1.02;
