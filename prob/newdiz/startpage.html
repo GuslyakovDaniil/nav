@@ -14,7 +14,7 @@
         <nav>
             <ul>
                 <li><a href="#">Навигатор</a></li>
-                <li><a href="#">Интерактивная карта</a></li>
+                <li><a href="#" id="scrollToInteractive">Интерактивная карта</a></li>
             </ul>
         </nav>
         <div class="container">
@@ -59,7 +59,7 @@
         <h1>MallMate - Ваш умный навигатор в торговом центре!</h1>
         <h2>Основные функции:</h2>
         <p>1. Быстрый поиск магазина с фильтрами и интерактивной картой.</p>
-        <p>2. Навигация без отслеживания местоположения с построением маршрута на карте.</p>
+        <p>2. Навигация с построением маршрута на карте.</p>
     </div>
     
     <svg id="my-svg" xmlns="http://www.w3.org/2000/svg">
@@ -153,6 +153,17 @@
 
     <script src="/prob/newdiz/startpage.js"></script>
     <script>
+// Пролистывание страницы при нажатии на кнопку Интерактивная карта
+document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('scrollToInteractive').addEventListener('click', function(event) {
+                event.preventDefault();
+                window.scroll({
+                    top: window.innerHeight * 1.4, // Вы можете изменить это значение в зависимости от вашего дизайна
+                    behavior: 'smooth'
+                });
+            });
+        });
+// =================================================================================================
         window.onload = function() {
             updateSVG(); // Вызываем функцию updateSVG из отдельного файла
         };
