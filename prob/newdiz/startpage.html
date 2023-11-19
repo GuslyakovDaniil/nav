@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Этаж prob</title>
+    <link rel="stylesheet" href="/prob/newdiz/startpage.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MallMate</div>
+    </header>
+    <header1>
+        <nav>
+            <ul>
+                <li><a href="#">Навигатор</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="search-bar">
+                <nav>
+                    <button id="filterBtn"><a>Filters</a></button>
+            </nav>
+                <input type="text" id="searchInput" placeholder="Search...">
+                <div class="popup" id="filterPopup">
+                    <div class="dropdown" id="seasonDropdown">
+                        <button class="filter-option" id="seasonBtn">Season</button>
+                        <div class="dropdown-content" id="seasonOptions">
+                            <label data-value="spring"> Spring</label>
+                            <label data-value="summer"> Summer</label>
+                            <label data-value="autumn"> Autumn</label>
+                            <label data-value="winter"> Winter</label>
+                        </div>
+                    </div>
+                    <div class="dropdown" id="genderDropdown">
+                        <button class="filter-option" id="genderBtn">Gender</button>
+                        <div class="dropdown-content" id="genderOptions">
+                            <label data-value="male"> Male</label>
+                            <label data-value="female"> Female</label>
+                        </div>
+                    </div>
+                    <div class="dropdown" id="ratingDropdown">
+                        <button class="filter-option" id="ratingBtn">Rating</button>
+                        <div class="dropdown-content" id="ratingOptions">
+                            <label data-value="1"> 1 star</label>
+                            <label data-value="2"> 2 stars</label>
+                            <label data-value="3"> 3 stars</label>
+                            <label data-value="4"> 4 stars</label>
+                            <label data-value="5"> 5 stars</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header1>
+    <img src="/img\ico\DeWatermark.ai_1700322851225.png" alt="Логотип">
+
+    <!-- Здесь вы можете добавить элементы для отображения выбранных фильтров -->
+
+    <script src="/prob/newdiz/startpage.js"></script>
+</body>
+</html>
