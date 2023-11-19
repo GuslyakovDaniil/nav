@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: ISOCpeur v1.02;
     background-image: url('/img/fon/fon1.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -12,6 +12,7 @@ body {
 }
 header {
     background-color: rgb(192,150,78);
+    font-family: ISOCpeur v1.02;
     color: #fff;
     padding: 10px 20px;
     display: flex;
